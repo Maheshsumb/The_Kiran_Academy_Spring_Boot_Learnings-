@@ -1,5 +1,7 @@
 package com.tka.jdbcconnectivity.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,13 @@ public class StudentService {
 	
 	public Student displaySpecificData(int sId) {
 		return sd.displaySpecificData(sId);
+	}
+	
+	public String updateData(int sId, Student s) {
+		return sd.updateData(sId, s);
+	}
+	public List<Student> getAllData(){
+		return sd.getAllData();
 	}
 
 }
